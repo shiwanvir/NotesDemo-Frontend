@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Note App</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" />
+        <link rel="stylesheet" href="./css/styles.css">
+    
+    </head>
+
+
+<body>
+
+    <form id="note_form" class="note-form">
+        <h1 id="form-header">Notes Demo</h1>
+        <!--this if filed will hold the id value of the current note object-->
+        <input type="hidden" id="id" name="id" value="">
+        <div class="form-group">
+        <label for="title" class="label-left">Note Title:</label>
+        <input type="text"  id ="title" name="title" placeholder="Note Title" class="input-right" required>
+        </div>
+        <div class="form-group">
+        <label for="description" class="label-left">Note Description:</label>
+        <textarea id="description" name="description" placeholder="Note Description" class="input-right" rows="5" cols="40" required></textarea>
+        </div>
+        <div class="button-group">
+        <button id ='submit_button' type="submit">Save</button>
+        <button id ='cancel_button' type="button">Cancel</button>
+        </div>
+    </form>
+
+    <div id="note_table_container">
+        <h2>Saved Notes </h2>
+        <table id ='notes-table' border="1" style="display: none">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--this table body will be dynamically careated inside app.js-->
+            </tbody>
+        </table>
+        <div id="empty-table-message" style="display: none;">
+            <p>No notes available.</p>
+        </div>
+
+    </div>
+ 
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
